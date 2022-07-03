@@ -1,9 +1,10 @@
 import './App.css';
+import DoctorSelection from './Components/DoctorSelection';
 
 function App() {
   return (
     <div>
-      This is react App
+      <DoctorSelection></DoctorSelection>
     </div>
   );
 }
