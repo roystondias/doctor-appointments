@@ -8,12 +8,15 @@ function DoctorSelection() {
     return state.buttonClickReducer.buttonClick;
   })
   let dispatch = useDispatch();
-  const onClickHandler = () => {
+  const onClickHandler = (event) => {
+    event.preventDefault();
     dispatch(onButtonCick());
   }
   return (
     <div>
-      <button onClick={onClickHandler}>doctor 1</button>
+      <input className="doctorName" type="button" onClick={onClickHandler} value="doctor 1"></input>
+      <input className="doctorName" type="button" onClick={onClickHandler} value="doctor 2"></input>
+      <input className="doctorName" type="button" onClick={onClickHandler} value="doctor 3"></input>
       {buttonClickState ? <CalendarSelection></CalendarSelection> : ""}
     </div>
   )

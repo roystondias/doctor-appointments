@@ -10,14 +10,14 @@ function CalendarSelection() {
   const dispatch = useDispatch();
   const onClickCalendar = (event) => {
     event.preventDefault();
-    // console.log(document.getElementById("input").value);
+    // console.log(document.getElementById("doctorName").value);
     dispatch(onDateSelction());
   }
   console.log(dateSelectionState);
   return (
     <div>
       <form>
-        <input id="input" type="date" />
+        <input id="input" type="date"/>
         <input type="submit" onClick={onClickCalendar}></input>
         {dateSelectionState ? <SlotSelection></SlotSelection> : ""}
       </form>

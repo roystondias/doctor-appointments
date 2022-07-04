@@ -1,9 +1,14 @@
+let array = [];
 const initialState = {
     buttonClick: false,
-    dateSelection: false
+    dateSelection: false,
+    data: array,
 }
 
+
 const buttonClickReducer = (state = initialState, action) => {
+    console.log(action.payload);
+    console.log(array);
     switch (action.type) {
         case "BUTTON_CLICK":
             return {
@@ -15,8 +20,18 @@ const buttonClickReducer = (state = initialState, action) => {
                 buttonClick: true,
                 dateSelection: true,
             }
+
+        case "INFO_GATHERING":
+            array = [...array, action.payload];
+            return {
+                buttonClick: true,
+                dateSelection: true,
+                data: array,
+            }
         default: return state;
     }
 }
+
+console.log(array);
 
 export default buttonClickReducer

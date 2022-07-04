@@ -9,3 +9,10 @@ export const onDateSelction = ()=>{
         type: "DATE_SELECTION",
     }
 }
+
+export const infoGathering = (data)=>{
+    return {
+        type: "INFO_GATHERING",
+        payload: data,
+    }
+}
