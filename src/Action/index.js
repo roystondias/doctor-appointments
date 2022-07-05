@@ -16,3 +16,9 @@ export const infoGathering = (data)=>{
         payload: data,
     }
 }
+
+export const disableDate =()=>{
+    return {
+        type: "DISABLE_DATE",
+    }
+}

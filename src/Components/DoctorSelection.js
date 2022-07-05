@@ -14,9 +14,7 @@ function DoctorSelection() {
   }
   return (
     <div>
-      <input className="doctorName" type="button" onClick={onClickHandler} value="doctor 1"></input>
-      <input className="doctorName" type="button" onClick={onClickHandler} value="doctor 2"></input>
-      <input className="doctorName" type="button" onClick={onClickHandler} value="doctor 3"></input>
+      <button onClick={onClickHandler} value="doctor 1">doctor 1</button>
       {buttonClickState ? <CalendarSelection></CalendarSelection> : ""}
     </div>
   )

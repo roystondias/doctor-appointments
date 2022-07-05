@@ -3,12 +3,13 @@ const initialState = {
     buttonClick: false,
     dateSelection: false,
     data: array,
+    disableDate: false,
 }
 
 
 const buttonClickReducer = (state = initialState, action) => {
-    console.log(action.payload);
-    console.log(array);
+    // console.log(action.payload);
+    // console.log(array);
     switch (action.type) {
         case "BUTTON_CLICK":
             return {
@@ -28,10 +29,17 @@ const buttonClickReducer = (state = initialState, action) => {
                 dateSelection: true,
                 data: array,
             }
+        case "DISABLE_DATE":
+            return {
+                buttonClick: true,
+                dateSelection: true,
+                data: array,
+                disableDate: true,
+            }
         default: return state;
     }
 }
 
-console.log(array);
+// console.log(array);
 
 export default buttonClickReducer

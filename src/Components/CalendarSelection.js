@@ -13,7 +13,6 @@ function CalendarSelection() {
     // console.log(document.getElementById("doctorName").value);
     dispatch(onDateSelction());
   }
-  console.log(dateSelectionState);
   return (
     <div>
       <form>
@@ -26,3 +25,4 @@ function CalendarSelection() {
 }
 
 export default CalendarSelection
+
