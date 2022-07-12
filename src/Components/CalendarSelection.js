@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import { onDateSelction } from '../Action/index'
 import SlotSelection from './SlotSelection'
+import styles from './CalendarSelection.module.css'
 
 function CalendarSelection() {
   const dateSelectionState = useSelector((state) => {
@@ -10,17 +11,19 @@ function CalendarSelection() {
   const dispatch = useDispatch();
   const onClickCalendar = (event) => {
     event.preventDefault();
-    // console.log(document.getElementById("doctorName").value);
     dispatch(onDateSelction());
   }
+
   return (
-    <div>
-      <form>
-        <input id="input" type="date"/>
-        <input type="submit" onClick={onClickCalendar}></input>
-        {dateSelectionState ? <SlotSelection></SlotSelection> : ""}
-      </form>
-    </div>
+    <>
+      <div className={styles["calendar-section"]}>
+        <form>
+          <input id="input" type="date" />
+          <input type="button" onClick={onClickCalendar} value="Add Date"></input>
+        </form>
+      </div>
+      {dateSelectionState ? <SlotSelection></SlotSelection> : ""}
+    </>
   )
 }
 

@@ -1,0 +1,15 @@
+.slot-section{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.slot-section select{
+    padding: 8px 46px;
+    border-radius: 4px;
+    background-color: rgb(5, 91, 91);
+    color: white;
+    border: none;
+    margin: 5px;
+    border: none;
+}

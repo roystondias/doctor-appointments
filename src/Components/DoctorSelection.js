@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import { onButtonCick } from '../Action/index'
 import CalendarSelection from './CalendarSelection';
+import styles from './DoctorSelection.module.css'
 
 function DoctorSelection() {
   let buttonClickState = useSelector((state) => {
@@ -14,7 +15,11 @@ function DoctorSelection() {
   }
   return (
     <div>
-      <button onClick={onClickHandler} value="doctor 1">doctor 1</button>
+      <div className={styles["doctor-selection"]}>
+        <div onClick={onClickHandler} value="doctor 1">Doctor 1</div>
+        <div onClick={onClickHandler} value="doctor 2">Doctor 2</div>
+        <div onClick={onClickHandler} value="doctor 3">Doctor 3</div>
+      </div>
       {buttonClickState ? <CalendarSelection></CalendarSelection> : ""}
     </div>
   )

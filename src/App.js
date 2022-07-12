@@ -3,8 +3,11 @@ import DoctorSelection from './Components/DoctorSelection';
 
 function App() {
   return (
-    <div>
-      <DoctorSelection></DoctorSelection>
+    <div id="container">
+      <h1>Doctor Appointment</h1>
+      <div id="main-section">
+        <DoctorSelection></DoctorSelection>
+      </div>
     </div>
   );
 }

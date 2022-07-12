@@ -40,6 +40,6 @@ const buttonClickReducer = (state = initialState, action) => {
     }
 }
 
-// console.log(array);
+console.log(array);
 
 export default buttonClickReducer

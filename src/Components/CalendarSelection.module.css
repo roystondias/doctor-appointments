@@ -1,0 +1,12 @@
+.calendar-section{
+    display: flex;
+    justify-content: center;
+}
+.calendar-section input{
+    padding: 8px 46px;
+    border-radius: 4px;
+    background-color: rgb(5, 91, 91);
+    color: white;
+    border: none;
+    margin: 5px;
+}
